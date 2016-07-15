@@ -22,5 +22,4 @@ polygon(x = c(2.3, seq(2.3, 2.8, l = 100)),
 (popc <- 1 - integrate(f1, 2.25, 2.75)$value)
 ```
 
- 
 \newpage
