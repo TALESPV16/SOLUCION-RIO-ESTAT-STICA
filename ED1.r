@@ -30,7 +30,12 @@ resumo <- rbind(sumdf, sd)
 knitr::kable(resumo, align = 'c')
 ```
 
-Usaremos a função **sapply()** para realizar o cálculo dos parâmetros estatísticos para cada coluna, arredondando com a função **round()** os valores para até quatro significativos, usaremos a função **sapply()** para o cálculo do desvio padrão para cada coluna, arredondando o valor do desvio padrão para até 4 significativos com a função **round()**. Transformando o objeto sddf para do tipo dataframe com a função **data.frame()**, mostrando o dataframe com todos os dados necessários.
+Usaremos a função **sapply()** para realizar o cálculo dos parâmetros estatísticos para cada coluna,
+arredondando com a função **round()** os valores para até quatro significativos, 
+usaremos a função **sapply()** para o cálculo do desvio padrão para cada coluna, 
+arredondando o valor do desvio padrão para até 4 significativos com a função **round()**. 
+Transformando o objeto sddf para do tipo dataframe com a função **data.frame()**, 
+mostrando o dataframe com todos os dados necessários.
 
 ### Resposta letra b)
 ```{r, fig.height= 8, fig.width= 11}
@@ -80,11 +85,19 @@ resumo <- rbind(resumo, otprm, make.row.names = TRUE, stringsAsFactors=
 knitr::kable(resumo, align = 'c')
 ```
 
-Os gráficos e a tabela acima evidenciam que: para a Chaminé 1 e Chaminé 2 temos assimetria leve à direita como pode também ser notado pela variáveis skwns. Para a Chaminé 3 existem uma maior quantidade de leituras para valores mais baixos de concentração de monóxido de carbono, ou seja, existe uma assimetria à esquerda, com valor de skwns igual à -1,73, já a Chaminé 4 tem assimetria nula (skwns = 0), isso indica que a distribuição é normal ou simétrica.
+Os gráficos e a tabela acima evidenciam que: para a Chaminé 1 e Chaminé 2 temos assimetria leve 
+à direita como pode também ser notado pela variáveis skwns. Para a Chaminé 3 existem uma maior 
+quantidade de leituras para valores mais baixos de concentração de monóxido de carbono, ou seja, 
+existe uma assimetria à esquerda, com valor de skwns igual à -1,73, já a Chaminé 4 tem assimetria
+nula (skwns = 0), isso indica que a distribuição é normal ou simétrica.
 
 ###Resposta letra c)
 
-Ao Olhar a tabela acima pode-se notar que a variável Coefvar que corresponde ao Coeficiente de Variação Cv, está calculado para as quatro chaminés. Observando os valores calculados podemos notar que há uma ordem crescente onde o Cv pode ser ordenado dessa forma Coefvar 5.21 > 11.07 > 11.84 > 12.71, ou seja, o coeficiente de variação que corresponde à dispersão relativa dos dados, ordena em ordem crescente as chaminés em termos de dispersão relativa dessa forma:
+Ao Olhar a tabela acima pode-se notar que a variável Coefvar que corresponde ao Coeficiente de Variação Cv, 
+está calculado para as quatro chaminés. Observando os valores calculados podemos notar que há uma ordem 
+crescente onde o Cv pode ser ordenado dessa forma Coefvar 5.21 > 11.07 > 11.84 > 12.71, ou seja, 
+o coeficiente de variação que corresponde à dispersão relativa dos dados, ordena em ordem crescente 
+as chaminés em termos de dispersão relativa dessa forma:
 
 ```{r, include= FALSE }
 class <- matrix(c("Cham4",5.21,"Cham1", 11.07, "Cham3", 
@@ -97,7 +110,12 @@ knitr::kable(class, align = 'c')
 Ou seja a Chaminé 2 tem a maior dispersão relativa ou o maior coeficiente de variação dos dados. 
 
 ###Resposta letra d)
-Não é possível usar as estatísticas para descrever os dados, pois a distribuição não é normal, e ainda na Chaminé 2, temos uma distribuição bimodal, ou seja, exisem duas médias, e a média global dessas duas ditribuições não representa a população. Os gráficos abaixos comparam a distribuição dos dados de cada chaminé, com a distribuição normal, podemos observar que a única chaminé que tem proximidade com a distribuição normal é a Cham4, por isso nesse caso não é possível usar as estatisticas para todas as chaminés.
+Não é possível usar as estatísticas para descrever os dados, pois a distribuição não é normal, 
+e ainda na Chaminé 2, temos uma distribuição bimodal, ou seja, exisem duas médias, e a média 
+global dessas duas ditribuições não representa a população. Os gráficos abaixos comparam a 
+distribuição dos dados de cada chaminé, com a distribuição normal, podemos observar que a 
+única chaminé que tem proximidade com a distribuição normal é a Cham4, por isso nesse caso 
+não é possível usar as estatisticas para todas as chaminés.
 
 ```{r "QUESTAO ED1 Solução letra d", fig.height= 8, fig.width= 10, message = FALSE}
 par(mfrow = c(2,2))
